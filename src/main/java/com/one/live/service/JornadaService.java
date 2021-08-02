@@ -29,4 +29,14 @@ public class JornadaService {
     public Optional<JornadaTrabalho> getById(Long idJornada) {
         return jornadaRepository.findById(idJornada);
     }
+
+    public JornadaTrabalho updateJornada(JornadaTrabalho jornadaTrabalho){ // hibernate utiliza o mesmo método para
+        return jornadaRepository.save(jornadaTrabalho); // criar e para atualizar. A saber, save
+    }
+
+    public void deleteJornada(Long idJornada) {
+        jornadaRepository.deleteById(idJornada);
+    }
+
+
 }
